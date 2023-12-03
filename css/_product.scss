@@ -1,0 +1,214 @@
+.logo-product {
+  &.logo {
+    position: relative;
+    margin-top: 64px;
+    margin-left: 64px;
+    top: auto;
+    left: auto;
+    @include max-xxl {
+      margin-top: 50px;
+    }
+  }
+
+
+
+  a {
+    font-size: 40px;
+    font-family: 'GothamRnd-Book', sans-serif;
+    text-transform: uppercase;
+    background: $main-color-linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.product-page {
+  .section1 {
+    background: #011224;
+    @include max-sm {
+      height: auto;
+    }
+  }
+  .section2 {
+    background: #011224;
+    .container {
+      max-width: 1400px;
+    }
+  }
+
+  .product-frame {
+    vertical-align: top;
+    height: 100%;
+    @include max-sm {
+      height: auto;
+    }
+  }
+
+
+
+  .page-title {
+    background: $main-color-linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-family: 'GothamRnd-Book', sans-serif;
+    margin-top: 85px;
+    margin-bottom: 40px;
+    @include max-xxl {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .page-description {
+    width: 1380px;
+    font-family: 'GothamRnd-Light', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .products-list {
+    margin-top: 100px;
+    @include max-xxl {
+      margin-top: 50px;
+
+    }
+    .product-item {
+      position: relative;
+      .product-item-frame {
+        position: relative;
+        color: $main-color;
+        .product-thumbnail {
+          max-height: 100%;
+          overflow: hidden;
+          img {
+            height: 324px;
+            @include max-xxl {
+              height: 210px;
+            }
+            @include max-sm {
+              height: 400px;
+            }
+          }
+        }
+
+        .product-title {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(255, 255, 255, 0.6);
+          padding: 20px;
+          text-align: center;
+
+          font-size: 20px;
+          font-family: 'GothamRnd-Book', sans-serif;
+          margin: 0;
+        }
+
+        .product-description {
+          display: none;
+          position: absolute;
+          top: -15%;
+          left: -15%;
+          right: -15%;
+          bottom: -15%;
+          background: rgba(255,255,255,0.9);
+          padding: 30px 70px;
+          font-size: 20px;
+          font-family: 'GothamRnd-Light', sans-serif;
+          z-index: 10;
+          transition: visibility 0s, opacity 0.5s linear;
+          @include max-sm {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+          .product-title {
+            position: initial;
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            padding: 0;
+            background: transparent;
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 30px;
+            color: $main-color;
+            width: 300px;
+            @include max-xxl {
+              width: auto;
+              margin-bottom: 15px;
+            }
+            a {
+              color: $main-color;
+            }
+          }
+          p {
+            margin-top: 30px;
+            @include max-xxl {
+              margin-top: 5px;
+            }
+          }
+        }
+        &:hover {
+          .product-description {
+            display: block;
+          }
+        }
+      }
+    }
+
+
+    &.ocean-villa {
+      .product-item {
+        height: 324px;
+        @include max-xxl {
+          height: 210px;
+        }
+        @include max-sm {
+          height: 400px;
+        }
+        .product-item-frame {
+          .product-description {
+            @include max-xxl {
+              padding: 15px 20px;
+            }
+
+          }
+        }
+      }
+
+    }
+    &.lagoon-villa {
+      .product-item {
+        height: 324px;
+        @include max-xxl {
+          height: 210px;
+        }
+        @include max-sm {
+          height: 400px;
+        }
+        .product-item-frame {
+
+          .product-thumbnail {
+            @include max-xxl {
+              height: 210px;
+            }
+            @include max-sm {
+              height: 400px;
+            }
+            img {
+              width: 680px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,78 @@
+.section6 {
+    background: image('kimsa4.gif')no-repeat center;background-size: cover;
+    .big-title {
+        letter-spacing: 0.2em;margin: 0 0;
+        background: linear-gradient(90deg, #C89B63 0%, #FCCA85 49.65%, #C89B63 100%);
+        -webkit-background-clip: text;-webkit-text-fill-color: transparent;
+    }
+    .tab-content {
+        img {
+            max-width: 100%;
+            @include max-sm {
+                width: 100%;
+            }
+        }
+    }
+    .nav-control {
+        border-bottom: none;margin-bottom: 106px;margin-top: -25px;
+        @include max-xxl {
+            margin-bottom: 30px;
+        }
+        @include max-sm {
+            margin-top: 20px;
+        }
+        li  {
+            border: 1px solid #976F40;padding: 5px 5px;width: 128px;margin-right: 20px;
+            a {
+                display: block;border: 1px solid #976F40;color: #fff;font-family: GothamRnd-Book; font-size: 18px;background: transparent;border-radius: 0;height: 39px;line-height: 39px;padding: 0 0;
+                text-align: center;text-transform: uppercase;
+                &:hover, &:active, &:focus {text-decoration: none;border: 1px solid #976F40;}
+            }
+            &.active {
+                a {background: linear-gradient(90deg, #C89B63 0%, #FCCA85 49.65%, #C89B63 100%);font-family: GothamRnd-Bold;color: $main-color;}
+            }
+        }
+    }
+    .thumb-top {margin-bottom: 17px;}
+    .watch-more {
+        position: absolute;top: 0;right: 0;font-family: GothamRnd-Book; font-size: 16px;color: #fff;
+        @include max-sm {
+            top: -30px;
+        }
+    }
+    .container {position: relative;}
+    .video-thumb {
+        position: relative;
+        .glyphicon {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);font-size: 70px;color: #f4c15d;}
+    }
+}
+.fancybox-navigation .fancybox-button {
+    width: 80px;height: 80px;padding: 0 0 !important;
+    > div {display: none;}
+    &.fancybox-button--arrow_left {background: image('icon/icon-left-modal.png')no-repeat;left:132px;}
+    &.fancybox-button--arrow_right {background: image('icon/icon-right-modal.png')no-repeat;right:132px;}
+    &[disabled] {display: none;}
+}
+.fancybox-slide--image {
+    width: 1500px;
+    margin-left: -750px;
+    left: 50%;
+    .fancybox-content {
+        transform: inherit !important;
+        margin: 0 auto;
+        display: block;
+        position: initial;
+        left: auto;
+        right: auto;
+        padding-top: 50px;
+        top: 0;
+        padding-bottom: 60px;
+        .fancybox-image {
+            position: initial;
+        }
+    }
+}
+.fancybox-show-caption .fancybox-caption {
+    height: 60px;
+    padding: 20px 0;
+}

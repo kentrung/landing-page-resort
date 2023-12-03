@@ -1,0 +1,43 @@
+.section7 {
+    background: image('bg7.png')no-repeat center;background-size: cover;
+    position: relative;
+    .mask {
+        content: '';position: absolute;top: 0;left: 0;z-index: 0; width: 100%;height: 100%;background: $main-color;opacity: 0.6;
+    }
+    .container {position: relative;z-index: 2;}
+    .main-thumb {margin: 0 0 19px 0;}
+    .main-news {
+        padding: 0 0 0 70px;
+        @include max-xxl {
+            padding-left: 20px;
+        }
+        @include max-sm {
+            padding-left: 0;
+        }
+        .big-title {
+            letter-spacing: 0.2em;padding: 0 0 50px 0;margin: 0 -12px 0 0;
+            background: linear-gradient(270deg, #F4C15A -59.88%, #BE915A -3.97%, #C99B5B 12.55%, #F0BE5C 74.43%, #FFCB5D 106.79%, #F3C05A 336.75%, #BD914B 413.47%, #976F40 464.55%);
+            -webkit-background-clip: text;-webkit-text-fill-color: transparent;
+            @include max-xxl {
+                padding: 0 0 20px 0;
+            }
+            @include max-sm {
+                margin: 0;
+            }
+        }
+        .title {
+            margin: 0 0 10px 0;
+            @include max-xxl {
+                font-size: 24px;
+                line-height: 1.4;
+            }
+        }
+        .time {
+            padding: 0 0 45px 20px;position: relative;
+            @include max-xxl {
+                padding: 0 0 15px 20px;
+            }
+            img {position: absolute;top: 4px;left: 0;}
+        }
+    }
+}

@@ -1,0 +1,256 @@
+.hambuger {
+  position: fixed;
+  top: 32px;
+  right: 36px;
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  background: image('icon/icon-hambuger.svg') no-repeat center center;
+  transition: all 0.3s;
+  border: 3px solid #C89B63;
+  @include max-sm {
+    top: 15px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+#menu {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transform: translate(0, -50%);
+  @include xl {
+    top: 53%;
+  }
+  @include xxl {
+    top: 50%;
+  }
+  @include max-sm {
+    display: none;
+  }
+
+  li {
+    a {
+      display: block;
+      width: 63px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-family: GothamRnd-Book;
+      font-size: 24px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: $main-color;
+      background: #FFDA6B;
+      margin: 0 0 15px 0;
+      transition: all 0.3s;
+      transform: translate(-55px, 0);
+      @include max-xxl {
+        height: 60px;
+        line-height: 60px;
+        margin-bottom: 10px;
+      }
+
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+      }
+
+      &:hover {
+        background: linear-gradient(270deg, #F4C15A -59.88%, #BE915A -3.97%, #C99B5B 12.55%, #F0BE5C 74.43%, #FFCB5D 106.79%, #F3C05A 336.75%, #BD914B 413.47%, #976F40 464.55%);
+        transform: translate(0, 0);
+      }
+    }
+
+    &.active {
+      a {
+        background: linear-gradient(270deg, #F4C15A -59.88%, #BE915A -3.97%, #C99B5B 12.55%, #F0BE5C 74.43%, #FFCB5D 106.79%, #F3C05A 336.75%, #BD914B 413.47%, #976F40 464.55%);
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+
+#menu-anchor {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 358px;
+  height: 100vh;
+  min-height: 100vh;
+  background: $main-color;
+  opacity: 0.9;
+  z-index: 3;
+  transform: translate(100%, 0);
+  transition: all 0.3s;
+
+  &.active {
+    transform: translate(0, 0);
+  }
+
+  .x-close {
+    position: absolute;
+    top: 32px;
+    right: 36px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .logo {
+    margin: 28px 0 100px 63px;
+    @include max-sm {
+      margin-bottom: 30px;
+    }
+  }
+
+  .list-menu {
+    margin: 0 0;
+    padding: 0 0;
+
+    li {
+      height: 85px;
+      line-height: 85px;
+      text-align: left;
+      padding-left: 77px;
+      background: image("icon/menu-line.png") no-repeat bottom center;
+      @include max-sm {
+        height: 50px;
+        line-height: 50px;
+      }
+
+      a {
+        color: #fff;
+        font-family: GothamRnd-Book;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+          color: #C89B63;
+        }
+      }
+
+      &.active {
+        a {
+          font-family: GothamRnd-Bold;
+          font-size: 25px;
+          background: linear-gradient(90deg, #C89B63 0%, #FCCA85 49.65%, #C89B63 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.section1 {
+  background: image('bg1.gif') no-repeat center;
+  background-size: cover;
+  @include max-sm {
+    height: 100vh;
+  }
+
+  .logo {
+    position: absolute;
+    top: 22px;
+    left: 66px;
+    margin: 0 0;
+    @include max-sm {
+      top: 10px;
+      left: 15px;
+      width: calc(100% - 115px);
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .down {
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .list-social {
+    position: absolute;
+    bottom: 78px;
+    right: 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        height: 52px;
+        position: relative;
+        margin: 0 0 12px 0;
+
+        a {
+          color: $main-color;
+          font-family: GothamRnd-Medium;
+          font-size: 16px;
+          background: transparent;
+          overflow: hidden;
+          height: 100%;
+          border: 1px solid #C89B63;
+          padding: 3px 3px;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          &:active, &:focus, &:visited {
+            text-decoration: none;
+          }
+
+          .group {
+            display: block;
+            background: linear-gradient(90deg, #C89B63 0%, #FCCA85 49.65%, #C89B63 100%);
+            width: 44px;
+            height: 100%;
+            overflow: hidden;
+            transition: all 0.3s;
+            text-align: center;
+
+            .icon {
+              float: left;
+              display: block;
+              width: 44px;
+              text-align: center;
+              height: 44px;
+              line-height: 44px;
+            }
+
+            .text {
+              display: inline-block;
+              width: 112px;
+              line-height: 47px;
+              position: absolute;
+              left: 38px;
+            }
+          }
+
+          &:hover {
+            .group {
+              width: 156px;
+              text-decoration: none;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

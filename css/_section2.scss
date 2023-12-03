@@ -1,0 +1,78 @@
+.section2 {
+    background: image('bg2.png')no-repeat center;background-size: cover;
+    .main-img {
+        position: absolute;top: 50%;right: 0;z-index: 1;transform: translate(0,-50%);
+
+        @include max-xxl {
+            width: 800px;
+            top: 50%;
+            margin-top: -220px;
+            transform: initial;
+        }
+        @include max-sm {
+            width: 100%;
+            position: initial;
+            top: auto;
+            margin-top: auto;
+        }
+        img {
+            transition-delay: .5s;
+            transform: translateX(100%);
+            display: inline-block;
+            transition: all .5s cubic-bezier(.09,.93,.47,.95);
+            opacity: 0;
+        }
+    }
+    .main-info {
+        width: 600px;height: 836px;
+        background: image('section2-2.png')no-repeat;padding: 110px 0 0 59px;
+        transition-delay: .5s;
+        transform: translateX(-100%);
+        transition: all .5s cubic-bezier(.09,.93,.47,.95);
+        opacity: 0;
+        .main-info-frame {
+            transition-delay: 1s;
+            transform: translateX(-100%);
+            transition: all 1s cubic-bezier(.09,.93,.47,.95);
+            opacity: 0;
+        }
+        @include max-xxl {
+            padding: 40px;
+            width: 400px;
+            height: auto;
+        }
+        @include max-sm {
+            width: auto;
+            margin-left: -10px;
+            margin-right: -10px;
+            padding: 30px 20px;
+        }
+        .big-title {
+            letter-spacing: 0.2em;margin: 0 0 0 0;width: 340px;
+            background: linear-gradient(90deg, #C89B63 0%, #FCCA85 49.65%, #C89B63 100%);
+            -webkit-background-clip: text;-webkit-text-fill-color: transparent;
+            @include max-sm {
+                width: auto;
+                font-size: 36px;
+            }
+        }
+        .des {
+            margin: 0 110px 0 0;
+            @include max-xxl {
+                margin-right: 0;
+            }
+        }
+    }
+    &.active {
+        .main-img {
+            img {
+                transform: none;
+                opacity: 1;
+            }
+        }
+        .main-info, .main-info-frame {
+            transform: none;
+            opacity: 1;
+        }
+    }
+}

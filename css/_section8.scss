@@ -1,0 +1,149 @@
+.section8 {
+    background: image('bg8.jpg')no-repeat center;background-size: cover;position: relative;
+    .mask {content: '';position: absolute;top: 0;left: 0;z-index: 1; width: 100%;height: 100%;background: $main-color;opacity: 0.6;}
+    .animation-left-top {
+        position: relative;overflow: hidden;
+        .a1 {overflow: hidden;}
+        .a2 {}
+    }
+    footer {
+        position: relative;z-index: 2;
+        .main-title {
+            letter-spacing: 0.2em;padding: 50px 0 50px 0;
+            background: linear-gradient(270deg, #F4C15A -59.88%, #BE915A -3.97%, #C99B5B 12.55%, #F0BE5C 74.43%, #FFCB5D 106.79%, #F3C05A 336.75%, #BD914B 413.47%, #976F40 464.55%);
+            -webkit-background-clip: text;-webkit-text-fill-color: transparent;
+            @include max-xxl {
+                padding: 15px 0;
+            }
+        }
+        .footer-top {
+            .f-form {
+                .big-title {
+                    margin: 0 0 25px 0;
+                    background: linear-gradient(270deg, #F4C15A -59.88%, #BE915A -3.97%, #C99B5B 12.55%, #F0BE5C 74.43%, #FFCB5D 106.79%, #F3C05A 336.75%, #BD914B 413.47%, #976F40 464.55%);
+                    -webkit-background-clip: text;-webkit-text-fill-color: transparent;
+                    @include max-xxl {
+                        margin: 0 0 15px 0;
+                    }
+                }
+                .form-group {
+                    margin-bottom: 30px;
+                    @include max-xxl {
+                        margin-bottom: 15px;
+                    }
+                }
+                .form-control {
+                    background: transparent;border: 2px solid #fff;height: 45px;font-size: 16px;line-height: 19px;font-family: GothamRnd-Book;border-radius: 0;padding: 10px 20px;color: #fff;
+                    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                        color: #fff;
+                    }
+                    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                       color: #fff;
+                       opacity: 1;
+                    }
+                    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+                       color: #fff;
+                       opacity: 1;
+                    }
+                    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                       color: #fff;
+                    }
+                }
+                .bds {
+                    margin: -10px 0 26px 0;
+                    @include max-xxl {
+                        margin-bottom: 15px;
+                    }
+                }
+                .group-check {
+                    margin: 0 0 36px 0;
+                    @include max-xxl {
+                        margin-bottom: 15px;
+                    }
+                    .left {float: left;}
+                    .right {float: right;}
+                    .contain {
+                        display: block;position: relative;padding-left: 35px;margin-bottom: 12px;cursor: pointer;margin: 0 0; font-size: 16px;line-height: 30px;font-weight: inherit;letter-spacing: 0.01em;font-family: GothamRnd-Book; user-select: none;
+                        input {position: absolute;opacity: 0;cursor: pointer;height: 0;width: 0;}
+                        .checkmark {position: absolute;top: 4px;left: 0;height: 20px;width: 20px;background-color: transparent;border: 2px solid #fff;}
+                        .checkmark:after {content: "";position: absolute;display: none;}
+                        input:checked ~ .checkmark:after {display: block;}
+                        .checkmark:after {left: 6px;top: 2px;width: 5px;height: 10px;border: solid white;border-width: 0 2px 2px 0;transform: rotate(45deg);}
+                    }
+                }
+                .register {
+                    height: 57px;line-height: 41px; border: 2px solid #FCCA85;border-radius: 0;background: transparent;padding: 6px 7px;margin: 0 0 73px 0;
+                    @include max-xxl {
+                        margin: 0 0 20px 0;
+                    }
+                    span {display: block;height: 100%; background: linear-gradient(90deg, #C89B63 0%, #FCCA85 49.65%, #C89B63 100%);}
+                    &:hover {
+                        border-color: #fff;
+                        span {background: #fff;}
+                    }
+                }
+                .logo {
+                    display: block;width: 489px;height: 89px;margin: 0 auto;overflow: hidden;position: relative;
+                    .l1 {display: block;overflow: hidden;position: absolute;}
+                    .l2 {display: block;}
+                    .r1 {display: block;overflow: hidden;position: absolute;}
+                    .r2 {display: block;}
+                }
+            }
+            .f-info {
+                .g-map {
+                    width: 100%;height: 448px;box-shadow: 0 0 3px #ccc;background: rgba(244, 193, 90, 0.14);margin: 0 0 70px 0;
+                    @include max-xxl {
+                        height: 340px;
+                        margin: 0 0 15px;
+                    }
+                }
+                .g-info {
+                    letter-spacing: 0.01em;text-align: justify;padding: 0 0 10px 0;
+                    .tit, p {
+                        margin: 0 0 16px 0;
+                        @include max-xxl {
+                            margin: 0;
+                        }
+                    }
+                    p {
+                        @include max-xxl {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .resp-container {
+                position: relative;overflow: hidden;
+                .resp-iframe {position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 0;}
+            }
+        }
+        .footer-bottom {
+            border-top: 1px solid #fff;
+            .text {
+                padding: 30px 0;
+                @include max-xxl {
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+    &.active {
+        .animation-left-top {
+            .a1 {animation: animate-footer-m 2s;}
+            .a2 {animation: animate-footer-mm 2s;}
+        }
+        .logo {
+            .l1 {animation: animate-footer-left1 3s;}
+            .l2 {animation: animate-footer-left2 3s;}
+            .r1 {animation: animate-footer-right1 3s;}
+            .r2 {animation: animate-footer-right2 3s;}
+        }
+        .register {
+            animation-name: animate-footer-register;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-delay: 0.5s;
+        }
+    }
+}

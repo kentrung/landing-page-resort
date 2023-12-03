@@ -1,0 +1,112 @@
+@media (min-width: 1710px) {
+    .container {width: 1680px;}
+}
+.margin-0 {margin: 0 0;}
+body {
+    background-color: $main-color;
+}
+.owl-carousel {
+    .owl-nav {
+        button{
+            position: absolute;
+            top: 50%;
+            margin-top: -27px;
+            -webkit-background-size: 54px 54px;
+            background-size: 54px 54px;
+            width: 54px;
+            height: 54px;
+            span {
+                display: none;
+            }
+            &.owl-next, &.owl-next:hover {
+                right: -70px;
+                background: url(../images/icon/icon-right-modal.png) no-repeat 0 0;
+                -webkit-background-size: 54px 54px;
+                background-size: 54px 54px;
+                opacity: 1;
+            }
+            &.owl-next:hover {
+                opacity: 0.8;
+            }
+            &.owl-prev, &.owl-prev:hover {
+                left: -70px;;
+                background: url(../images/icon/icon-left-modal.png) no-repeat 0 0;
+                -webkit-background-size: 54px 54px;
+                background-size: 54px 54px;
+                opacity: 1;
+            }
+            &.owl-prev:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+
+@keyframes a-top-bottom-before{
+    0% {transform: translateY(0)}
+    100% {transform: translateY(200%)}
+}
+@keyframes animateOverlay {
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+@keyframes animate-footer-m {
+    0% {border-radius: 0 500px 500px 0;transform: translate(-100%, 0);}
+    100% {border-radius: 0 0 0 0;transform: translate(0%, 0);}
+}
+@keyframes animate-footer-mm {
+    0% {transform: translate(100%, 0);}
+    100% {transform: translate(0%, 0);}
+}
+@keyframes animate-footer-left1 {
+    0% {transform: translate(-100%, 0);}
+    100% {transform: translate(0%, 0);}
+}
+@keyframes animate-footer-left2 {
+    0% {transform: translate(100%, 0);}
+    100% {transform: translate(0%, 0);}
+}
+@keyframes animate-footer-right1 {
+    0% {transform: translate(100%, 0);}
+    100% {transform: translate(0%, 0);}
+}
+@keyframes animate-footer-right2 {
+    0% {transform: translate(-100%, 0);}
+    100% {transform: translate(0%, 0);}
+}
+@keyframes animate-footer-register {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+    40% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+//https://css-tricks.com/snippets/sass/simple-asset-helper-functions/?fbclid=IwAR22WM5dPRJI7wqC8-NG-91mqlufmrKI9u64egNAVXRCTy7DGtNO3q7K9T4
+/// Base path for assets (fonts, images...),
+/// should not include trailing slash
+/// @access public
+/// @type String
+$asset-base-path: '..' !default;
+
+/// Asset URL builder
+/// @access private
+/// @param {String} $type - Asset type, matching folder name
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the asset
+@function asset($type, $file) {
+  @return url($asset-base-path + '/' + $type + '/' + $file);
+}
+
+/// Image asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the image
+/// @require {function} asset
+@function image($file) {
+  @return asset('images', $file);
+}
+
+/// Font asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the font
+/// @require {function} asset
+@function font($file) {
+  @return asset('fonts', $file);
+}
+
+$screen-xs-min: 0;
+$screen-sm-min: 576px;
+$screen-sm-max: 767px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1500px;
+
+$main-color: #011224;
+$main-color-transparent: rgba(1, 18, 36, 0.8);
+$main-color-linear: linear-gradient(90deg, #F4C15A 0%, #BE915A 10.66%, #C99B5B 13.81%, #F0BE5C 25.61%, #FFCB5D 31.78%, #F3C05A 75.63%, #BD914B 90.26%, #976F40 100%);

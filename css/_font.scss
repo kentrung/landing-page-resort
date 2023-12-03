@@ -1,0 +1,34 @@
+@font-face {
+    font-family: GothamRnd-Light;
+    src: font('ttf/GothamRnd-Light.ttf') format('truetype'), font('otf/GothamRnd-Light.otf') format("opentype");
+}
+@font-face {
+    font-family: GothamRnd-Book;
+    src: font('ttf/GothamRnd-Book.ttf') format('truetype'), font('otf/GothamRnd-Book.otf') format("opentype");
+}
+@font-face {
+    font-family: GothamRnd-Medium;
+    src: font('ttf/GothamRnd-Medium.ttf') format('truetype'), font('otf/GothamRnd-Medium.otf') format("opentype");
+}
+@font-face {
+    font-family: GothamRnd-Bold;
+    src: font('ttf/GothamRnd-Bold.ttf') format('truetype'), font('otf/GothamRnd-Bold.otf') format("opentype");
+}
+.font-GothamRnd-Light {font-family: GothamRnd-Light;}
+.font-GothamRnd-Book {font-family: GothamRnd-Book;}
+.font-GothamRnd-Medium {font-family: GothamRnd-Medium;}
+.font-GothamRnd-Bold {font-family: GothamRnd-Bold;}
+
+.font16 {font-size: 16px;line-height: 19px;}
+.font18 {font-size: 18px;line-height: 22px;}
+.font20 {font-size: 20px;line-height: 30px;}
+.font25 {font-size: 25px;line-height: 30px;}
+.font30 {font-size: 30px;line-height: 52px;}
+.font32 {font-size: 32px;line-height: 38px;}
+.font40 {font-size: 40px;line-height: 55px;}
+.text-white {color: #fff;}
+.text-011224 {color: $main-color;}
+.text-F2E9E1 {color: #F2E9E1;}
+
+
+
